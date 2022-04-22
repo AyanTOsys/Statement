@@ -1,0 +1,23 @@
+<h2>
+	Welcome To Account Statement Page
+</h2>
+<hr>
+<br><br><br><br>
+<button (click)="findAllTransaction()">Click to view all transactions</button><br><br>
+
+<table border="7" cellspacing="7" cellpadding="7">
+	<th>Transaction Id</th>    <th>Transaction Date</th>    <th>Debit Account Number</th>    <th>Credit Account Number</th>
+    <th>Description</th> <th>Transaction Amount</th>   <th>Debit Account Balance</th>    <th>Credit Account balance</th>
+		<tr *ngFor="let txn of txnArray">
+			<td>{{txn.transId}}</td>
+			<td>{{txn.transDate}}</td>
+			<td>{{txn.drAcNumber}}</td>
+			<td>{{txn.crAcNumber}}</td>
+			<td>{{txn.transDescription}}</td>
+			<td>{{txn.transAmount}}</td>
+			<td>{{txn.drAcBalance}}</td>
+			<td>{{txn.crAcBalance}}</td>
+		</tr>
+</table>
+
+
